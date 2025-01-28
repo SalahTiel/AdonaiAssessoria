@@ -1,0 +1,456 @@
+:root{
+    --purple: #350e36;
+    --gold: #f3cc61;
+    --white: #F3F9FD;
+
+    --regular: 1rem;
+
+    
+    --container: 12vw;
+    --border-radius: 50px;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    overflow-X: hidden;
+}
+body{
+    background-color: var(--white);
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    padding: 8vh var(--container) 0;
+}
+header img{
+    height: 35px;
+}
+header a{
+    padding: 0.8rem;
+    border-radius: var(--border-radius);
+    font: 500 0.7rem 'Montserrat';
+    color: var(--gold);
+    background-color: var(--purple);
+}
+    header a:hover{
+        color: var(--purple);
+        background-color: var(--gold);
+        transition: all 300ms;
+    }
+
+
+
+section.home{
+    width: 100vw;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    padding-inline: var(--container);
+    background: url(assets/img-homebg-mobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 30% 50%;
+}
+section.home h1{
+    text-align: center;
+    font: 700 2rem 'Montserrat';
+    color: var(--white);
+}
+section.home p{
+    text-align: center;
+    font: 400 var(--regular) 'Montserrat';
+    color: var(--white);
+}
+section.home a{
+    width: 100%;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    font: 700 0.8rem 'Montserrat';
+    color: var(--gold);
+    background-color: var(--purple);
+
+}
+    section.home a:hover{
+        color: var(--purple);
+        background-color: var(--gold);
+        transition: all 300ms;
+        
+    }
+
+
+
+div.strip{
+    width: max-content;
+    display: flex;
+    align-items: center;
+    background-color: var(--gold);
+    height: 8vh;
+    gap: 1rem;
+    overflow: hidden;
+    border-block: 5px solid var(--purple);
+    animation: slide 15s linear infinite;
+}
+div.strip p{
+    width: 11rem;
+    text-align: center;
+    font: 700 0.8rem 'Montserrat';
+    color: var(--purple);
+}
+div.strip img{
+    width: 0.6rem;
+}
+
+
+
+section.testimonials{
+    display: flex;
+    flex-direction: column;
+    gap: 12vw;
+    padding: 8vh var(--container);
+    background-color: var(--purple);
+}
+section.testimonials div.carousel{
+    order: 1;
+}
+section.testimonials div.carousel div.carousel-content{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+section.testimonials div.carousel div.carousel-content div.comment{
+    padding: 1rem;
+    height: 15rem;
+    border-radius: 15px;
+    background-color: #89668a63;
+    position: relative;
+}
+section.testimonials div.carousel div.carousel-content div.comment img{
+    width: 50px;
+    border-radius: 10px;
+}
+section.testimonials div.carousel div.carousel-content div.comment p.name{
+    font: 600 1.1rem 'Montserrat';
+    color: var(--white);
+}
+section.testimonials div.carousel div.carousel-content div.comment p.tag{
+    width: max-content;
+    margin-top: 0.5rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 50px;
+    font: 400 0.8rem 'Montserrat';
+    border: 1px solid #F3F9FD;
+    color: var(--white);
+    background-color: #b79eb8;
+}
+section.testimonials div.carousel div.carousel-content div.comment p.testimonial{
+    margin-top: 0.5rem;
+    font: 400 1rem 'Montserrat';
+    color: var(--white);
+}
+section.testimonials div.carousel div.carousel-content div.comment img.stars{
+    position: absolute;
+    bottom: 1rem;
+}
+section.testimonials div.carousel div.buttons{
+    margin-top: 2rem;
+    display: none;
+    gap: 1rem;
+
+}
+section.testimonials div.carousel div.buttons button{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background-color: #b79eb8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    section.testimonials div.carousel div.buttons button:hover{
+        background-color: #987199;
+        transition: all 100ms;
+    }
+section.testimonials div.carousel div.buttons button.prev-btn{
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+section.testimonials div.carousel div.buttons button img{
+    height: 25px;
+}
+
+
+
+
+section.testimonials div.aside{
+    height: max-content;
+    order: 0;
+}
+section.testimonials div.aside p.legend{
+    width: max-content;
+    margin-inline: auto;
+    padding: 0.5rem;
+    border: 1px solid var(--white);
+    border-radius: 50px;
+    color: var(--white);
+    font: 400 1rem 'Montserrat';
+    background-color: #89668a63;
+}
+section.testimonials div.aside h2{
+    color: var(--white);
+    font: 600 1.5rem 'Montserrat';
+    margin-top: 2rem;
+    text-align: center;
+}
+section.testimonials div.aside p.text{
+    margin-top: 2rem;
+    color: #bbbbbb;
+    font: 400 1rem 'Montserrat';
+}
+section.testimonials div.aside a{
+    display: block;
+    margin-top: 2rem;
+    padding: 1rem;
+    font: 700 0.8rem 'Montserrat';
+    color: var(--purple);
+    background-color: var(--gold);
+    border-radius: 50px;
+    text-align: center;
+}
+    section.testimonials div.aside a:hover{
+        background-color: #89668a63;
+        color: var(--gold);
+        transition: all 300ms;
+}
+
+
+
+section.about{
+    margin-inline: var(--container);
+}
+section.about div.row{
+    display: flex;
+    flex-direction: column;
+    margin-top: 8vh;
+}
+section.about div.row div.text h3{
+    font: 600 2rem 'Montserrat';
+    color: var(--purple);
+}
+section.about div.row div.text p{
+    font: 400 var(--regular) 'Montserrat';
+    color: var(--purple);
+    margin-top: 2rem;
+}
+section.about div.row div.text a{
+    display: block;
+    padding: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+    border-radius: 50px;
+    font: 600 0.8rem 'Montserrat';
+    background-color: var(--purple);
+    color: var(--gold);
+}
+section.about div.row div.text a:hover{
+    background-color: var(--gold);
+    color: var(--purple);
+    transition: all 300ms;
+
+}
+section.about div.row img{
+    display: none;
+}
+
+section.about div.informations{
+    margin-top: 16vh;
+}
+section.about div.informations h3{
+    font: 600 1.5rem 'Montserrat';
+    text-align: center;
+    color: var(--purple);
+    margin-top: 8vh;
+}
+section.about div.informations p.subtitle{
+    font: 400 var(--regular) 'Montserrat';
+    text-align: center;
+    color: var(--purple);
+    margin-top: 1rem;
+}
+section.about div.informations div.boxes{
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: column;
+    gap: 2rem;
+}
+section.about div.informations div.boxes div.box{
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: #553157;
+
+}
+section.about div.informations div.boxes div.box img{
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+    object-fit: cover;
+    
+}
+section.about div.informations div.boxes div.box p.title{
+    color: var(--white);
+    font: 500 var(--regular) 'Montserrat';
+    margin-top: 1rem;
+    text-align: center;
+}
+section.about div.informations div.boxes div.box p.description{
+    color: var(--white);
+    font: 400 0.9rem 'Montserrat';
+    margin-top: 1rem;
+    text-align: center;
+}
+
+section.about div.informations a.button{
+    display: block;
+    padding: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+    border-radius: 50px;
+    font: 600 0.8rem 'Montserrat';
+    background-color: var(--purple);
+    color: var(--gold);
+}
+section.about div.informations a.button:hover{
+    background-color: var(--gold);
+    color: var(--purple);
+    transition: all 300ms;
+}
+section.about div.informations div.boxes.second div.box{
+    border: 2px solid var(--purple);
+    background-color: var(--white);
+}
+section.about div.informations div.boxes.second div.box img{
+    height: 80%;
+}
+section.about div.informations div.boxes.second div.box p.title{
+    font: 600 1.5rem 'Montserrat';
+    color: var(--purple);
+}
+
+
+section.FAQ{
+    margin-top: 8vh;
+    margin-inline: var(--container);
+}
+section.FAQ h2{
+    text-align: center;
+    font: 600 2rem 'Montserrat';
+    color: var(--purple);
+}
+section.FAQ details{
+    margin-top: 2rem;
+    border-bottom: 1px solid var(--purple);
+    padding-bottom: 2rem;
+    text-align: left;
+}
+section.FAQ details summary{
+    font: 600 var(--regular) 'Montserrat';
+    color: var(--purple);
+    display: flex;
+    justify-content: space-between;
+}
+section.FAQ details p{
+    font: 400 var(--regular) 'Montserrat';
+    color: var(--purple);
+    margin-top: 1rem;
+}
+section.FAQ details summary::marker{
+    content: "";
+    font-size: 0;
+    color: transparent;
+    opacity: 0;
+}
+section.FAQ details summary span::after{
+    content: '+';
+    color: var(--purple);
+}
+section.FAQ details[open] summary span::after{
+    content: "-";
+    color: var(--purple);
+}
+
+
+
+footer{
+    margin-top: 8vh;
+    padding: 8vh var(--container);
+    background-color: var(--purple);
+}
+footer div.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer div.top img{
+    width: 70px;
+}
+footer div.top p.CNPJ{
+    font: 600 0.7rem 'Montserrat';
+    color: var(--gold);
+}
+footer p.credits{
+    margin-top: 2rem;
+    color: var(--gold);
+    font: 400 var(--regular) 'Montserrat';
+    display: block;
+    margin-inline: auto;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes slide{
+    0%{transform: translate(calc((12.6rem + 1rem) * (-1)));}
+    100%{transform: translate(calc((12.6rem + 1rem) * (-5)));}
+}
