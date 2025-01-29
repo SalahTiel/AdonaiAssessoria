@@ -20,7 +20,7 @@ html{
     overflow-X: hidden;
 }
 body{
-    background-color: var(--white);
+    background-color: var(--purple);
     overflow: hidden;
 }
 a{
@@ -34,6 +34,7 @@ header{
     align-items: center;
     position: absolute;
     padding: 8vh var(--container) 0;
+    z-index: 1;
 }
 header img{
     height: 35px;
@@ -135,7 +136,7 @@ section.testimonials div.carousel div.carousel-content{
 }
 section.testimonials div.carousel div.carousel-content div.comment{
     padding: 1rem;
-    height: 15rem;
+    height: 20rem;
     border-radius: 15px;
     background-color: #89668a63;
     position: relative;
@@ -244,12 +245,12 @@ section.testimonials div.aside a{
 
 
 section.about{
-    margin-inline: var(--container);
+    padding: 8vh var(--container);
+    background-color: var(--white);
 }
 section.about div.row{
     display: flex;
     flex-direction: column;
-    margin-top: 8vh;
 }
 section.about div.row div.text h3{
     font: 600 2rem 'Montserrat';
@@ -356,8 +357,8 @@ section.about div.informations div.boxes.second div.box p.title{
 
 
 section.FAQ{
-    margin-top: 8vh;
-    margin-inline: var(--container);
+    padding: 8vh var(--container);
+    background-color: var(--white);
 }
 section.FAQ h2{
     text-align: center;
@@ -375,6 +376,7 @@ section.FAQ details summary{
     color: var(--purple);
     display: flex;
     justify-content: space-between;
+    text-align: left;
 }
 section.FAQ details p{
     font: 400 var(--regular) 'Montserrat';
@@ -394,6 +396,9 @@ section.FAQ details summary span::after{
 section.FAQ details[open] summary span::after{
     content: "-";
     color: var(--purple);
+}
+section.FAQ details summary::-webkit-details-marker {
+    display: none;
 }
 
 
@@ -426,6 +431,26 @@ footer p.credits{
 
 
 
+
+section.home.animated-item,
+div.carousel.animated-item,
+div.aside.animated-item,
+div.row.animated-item,
+div.informations.animated-item,
+section.FAQ.animated-item{
+    opacity: 0;
+    transform: translate(-70px);
+    transition: all 1s;
+}
+section.home.animated-item.visible,
+div.carousel.animated-item.visible,
+div.aside.animated-item.visible,
+div.row.animated-item.visible,
+div.informations.animated-item.visible,
+section.FAQ.animated-item.visible{
+    opacity: 1;
+    transform: translate(0);
+}
 
 
 

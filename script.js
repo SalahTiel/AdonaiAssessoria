@@ -19,3 +19,18 @@ nextBtn.addEventListener('click', () => {
   currentIndex = (currentIndex === comments.length - 1) ? 0 : currentIndex + 1;
   updateCarousel();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible"); 
+      } else {
+        entry.target.classList.remove("visible");
+      }
+    });
+  }, { threshold: 0.15 });
+
+  const elements = document.querySelectorAll(".animated-item");
+  elements.forEach((el) => observer.observe(el));
+});
