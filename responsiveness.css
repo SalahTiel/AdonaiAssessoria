@@ -14,7 +14,7 @@
 
 
     section.home{
-        background: url(assets/img-homebg.png);
+        background: url(assets/CAPA-SITE.png);
         background-size: cover;
         overflow: hidden;
     }
@@ -23,7 +23,7 @@
         text-align: left;
         font: 500 3.5rem 'Montserrat';
     }
-    section.home p{
+    section.home p.legend{
         width: 50%;
         text-align: left;
     }
@@ -31,6 +31,9 @@
         width: max-content;
         font-size: 1.5rem;
         padding: 1.2rem;
+    }
+    section.home a p{
+        font: 700 1.2rem 'Montserrat';
     }
 
 
@@ -94,7 +97,7 @@
         width: max-content;
         font-size: 1.2rem;
     }
-    section.about div.row img{
+    section.about div.row img.image{
         display: block;
     }
     

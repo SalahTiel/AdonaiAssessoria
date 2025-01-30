@@ -4,9 +4,8 @@
     --white: #F3F9FD;
 
     --regular: 1rem;
-
     
-    --container: 12vw;
+    --container: 10vw;
     --border-radius: 50px;
 
 }
@@ -40,18 +39,27 @@ header img{
     height: 35px;
 }
 header a{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     padding: 0.8rem;
     border-radius: var(--border-radius);
     font: 500 0.7rem 'Montserrat';
-    color: var(--gold);
-    background-color: var(--purple);
+    color: var(--purple);
+    background-color: var(--gold);
 }
     header a:hover{
-        color: var(--purple);
-        background-color: var(--gold);
+        color: var(--gold);
+        background-color: var(--purple);
         transition: all 300ms;
     }
-
+    header a:hover img{
+        content: url(assets/icon-whatsapp-gold.png);
+    }
+header a img{
+    width: 30px;
+    height: 30px;
+}
 
 
 section.home{
@@ -62,10 +70,10 @@ section.home{
     gap: 2rem;
     justify-content: center;
     padding-inline: var(--container);
-    background: url(assets/img-homebg-mobile.png);
+    background: url(assets/capasite-mobile.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 30% 50%;
+    background-position: 80% 50%;
 }
 section.home h1{
     text-align: center;
@@ -78,23 +86,35 @@ section.home p{
     color: var(--white);
 }
 section.home a{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     width: 100%;
     padding: 1rem;
     border-radius: var(--border-radius);
     text-align: center;
-    font: 700 0.8rem 'Montserrat';
-    color: var(--gold);
-    background-color: var(--purple);
-
+    background-color: var(--gold);
 }
     section.home a:hover{
-        color: var(--purple);
-        background-color: var(--gold);
+        background-color: var(--purple);
+        color: var(--gold);
         transition: all 300ms;
-        
     }
+    section.home a:hover p{
+        color: var(--gold);
+    }
+    section.home a:hover img{
+        content: url(assets/icon-whatsapp-gold.png);
 
-
+}
+section.home a img{
+    width: 30px;
+    height: 30px;
+}
+section.home a p{
+    font: 700 0.8rem 'Montserrat';
+    color:var(--purple);
+}
 
 div.strip{
     width: max-content;
@@ -227,7 +247,10 @@ section.testimonials div.aside p.text{
     font: 400 1rem 'Montserrat';
 }
 section.testimonials div.aside a{
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     margin-top: 2rem;
     padding: 1rem;
     font: 700 0.8rem 'Montserrat';
@@ -240,6 +263,13 @@ section.testimonials div.aside a{
         background-color: #89668a63;
         color: var(--gold);
         transition: all 300ms;
+    }
+    section.testimonials div.aside a:hover img{
+        content: url(assets/icon-whatsapp-gold.png);
+    }
+section.testimonials div.aside a img{
+    width: 30px;
+    height: 30px;
 }
 
 
@@ -256,13 +286,16 @@ section.about div.row div.text h3{
     font: 600 2rem 'Montserrat';
     color: var(--purple);
 }
-section.about div.row div.text p{
+section.about div.row div.text p.legend{
     font: 400 var(--regular) 'Montserrat';
     color: var(--purple);
     margin-top: 2rem;
 }
 section.about div.row div.text a{
-    display: block;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
     margin-top: 2rem;
     text-align: center;
@@ -271,13 +304,20 @@ section.about div.row div.text a{
     background-color: var(--purple);
     color: var(--gold);
 }
-section.about div.row div.text a:hover{
-    background-color: var(--gold);
-    color: var(--purple);
-    transition: all 300ms;
+    section.about div.row div.text a:hover{
+        background-color: var(--gold);
+        color: var(--purple);
+        transition: all 300ms;
 
+    }
+    section.about div.row div.text a:hover img{
+        content: url(assets/icon-whatsapp-purple.png);
+    }
+section.about div.row div.text a img{
+    width: 30px;
+    height: 30px;
 }
-section.about div.row img{
+section.about div.row img.image{
     display: none;
 }
 
@@ -329,7 +369,10 @@ section.about div.informations div.boxes div.box p.description{
 }
 
 section.about div.informations a.button{
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     padding: 1rem;
     margin-top: 2rem;
     text-align: center;
@@ -338,10 +381,17 @@ section.about div.informations a.button{
     background-color: var(--purple);
     color: var(--gold);
 }
-section.about div.informations a.button:hover{
-    background-color: var(--gold);
-    color: var(--purple);
-    transition: all 300ms;
+    section.about div.informations a.button:hover{
+        background-color: var(--gold);
+        color: var(--purple);
+        transition: all 300ms;
+    }
+    section.about div.informations a.button:hover img{
+        content: url(assets/icon-whatsapp-purple.png);
+    }
+section.about div.informations a.button img{
+    width: 30px;
+    height: 30px;
 }
 section.about div.informations div.boxes.second div.box{
     border: 2px solid var(--purple);
